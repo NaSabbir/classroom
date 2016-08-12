@@ -7,4 +7,4 @@ rebuild:
 	docker build --no-cache -t classroom .
 
 run:
-	docker run -i --name classroom --rm -v "$(PWD)":/home/classroom_user -t classroom
+	docker run -i --name classroom --rm -v "$(PWD)":/srv/www -t classroom
