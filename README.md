@@ -18,6 +18,34 @@ If you're interested in helping out with Classroom development and looking for a
 ### Get started
 New to Ruby? No worries! You can follow these instructions to install a local server.
 
+#### Using Docker
+
+Perhaps the easiest way to get started is to use Docker.
+
+First, install [Docker Engine](https://docs.docker.com/engine/installation/). Then, run
+
+```
+docker-compose build
+```
+
+to build an "image" based on Ubuntu 14.04 in which all of GitHub Classroom's dependencies will be installed. Then run
+
+```
+docker-compose up
+```
+
+to start the server within a container. Visit `http://localhost:5000/` to confirm as much!
+
+The provided `docker-compose.yml` will "mount" the application within the container so that you can make changes to files locally that will be reflected inside the container.
+
+For a shell within the container, execute
+
+```
+docker exec -it classroom_web bash -l
+```
+
+after the container has been started (with `docker-compose up`).
+
 #### Installing a Local Server
 
 First things first, you'll need to install Ruby 2.3.1. We recommend using the excellent [rbenv](https://github.com/sstephenson/rbenv),
