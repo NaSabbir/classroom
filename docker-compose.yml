@@ -1,7 +1,7 @@
 services:
   web:
     build: .
-    container_name: classroom
+    container_name: classroom_web
     ports:
       - "5000:5000"
     volumes:
