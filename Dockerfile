@@ -63,4 +63,4 @@ RUN sudo service postgresql start && \
     sudo service postgresql stop
 
 # start the rails server
-CMD bash -c "sudo service postgresql start ; bash -c -l ./script/server"
+CMD sudo service postgresql start ; bash -c -l ./script/server
