@@ -5,7 +5,7 @@ EXPOSE 5000
 
 # without this, scripts/setup triggers:
 # PG::InvalidParameterValue: ERROR:  new encoding (UTF8) is incompatible with the encoding of the template database (SQL_ASCII)
-RUN locale-gen "en_US.UTF-8" && DEBIAN_FRONTEND=noninteractive dpkg-reconfigure locales && update-locale LANG=en_US.UTF-8
+RUN locale-gen "en_US.UTF-8" && update-locale LANG=en_US.UTF-8
 
 # username that will run the classroom server
 RUN useradd --create-home --skel=/dev/null ubuntu
